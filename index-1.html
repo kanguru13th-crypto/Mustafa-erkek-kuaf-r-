@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mustafa Erkek Kuaförü</title>
+<style>
+body{margin:0;font-family:Arial;background:#111;color:#fff;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.card{background:#1b1b1b;padding:24px;border-radius:16px;width:340px;box-shadow:0 0 20px rgba(255,215,0,.2)}
+h1{text-align:center;color:#d4af37}
+input{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none}
+button{width:100%;padding:12px;background:#d4af37;border:none;border-radius:8px;font-weight:bold;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Mustafa Erkek Kuaförü</h1>
+<input id="ad" placeholder="Ad Soyad">
+<input id="tel" placeholder="Telefon">
+<input id="tarih" type="date">
+<input id="saat" type="time">
+<button onclick="gonder()">WhatsApp'tan Randevu Al</button>
+</div>
+<script>
+const numara="905555555555"; // Kendi numaranı yaz
+function gonder(){
+const m=`Merhaba, ben ${ad.value}. ${tarih.value} tarihinde saat ${saat.value} için randevu almak istiyorum. Telefon: ${tel.value}`;
+window.open("https://wa.me/"+numara+"?text="+encodeURIComponent(m),"_blank");
+}
+</script>
+</body>
+</html>
