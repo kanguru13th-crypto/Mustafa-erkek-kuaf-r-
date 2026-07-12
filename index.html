@@ -25,7 +25,7 @@ button{width:100%;padding:12px;background:#d4af37;border:none;border-radius:8px;
 const numara="905382120603"; // Kendi numaranı yaz
 function gonder(){
 const m=`Merhaba, ben ${ad.value}. ${tarih.value} tarihinde saat ${saat.value} için randevu almak istiyorum. Telefon: ${tel.value}`;
-window.open("https://wa.me/"+numara+"?text="+encodeURIComponent(m),"_blank");
+window.location.href = "https://wa.me/" + numara + "?text=" + encodeURIComponent(m);
 }
 </script>
 </body>
